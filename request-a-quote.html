@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask for a quote, The Cake Boutique by Chef Ellah</title>
+<meta name="robots" content="noindex">
+<!--part:share-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Cake Boutique by Chef Ellah">
+<meta property="og:image" content="https://cake.boutique/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The round logo of The Cake Boutique above its name">
+<meta name="twitter:card" content="summary_large_image">
+<!--/part-->
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/DellaRespira-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/site.js"></script>
+<script type="module" src="js/quote.js"></script>
+</head>
+<body>
+<!--part:header-->
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-head">
+  <div class="wrap site-head__bar">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="" width="52" height="52">
+      <span><span class="brand__name">The Cake Boutique</span><span class="brand__by">by Chef Ellah</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+    <nav class="site-nav" id="site-menu" aria-label="Main">
+      <a href="weddings.html">Weddings</a>
+      <a href="celebration-cakes.html">Celebration cakes</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--rose" href="request-a-quote.html" aria-current="page">Ask for a quote</a>
+    </nav>
+  </div>
+</header>
+<!--/part-->
+
+<main id="main" class="quote-page">
+  <div class="wrap quote-page__grid">
+
+    <div class="quote-page__main">
+      <div class="quote-page__intro">
+        <h1 class="page-title">Tell me about your occasion</h1>
+        <p>This is an inquiry, not a booking. Nothing is reserved until we have talked and a deposit is in.</p>
+      </div>
+
+      <form class="form" method="post" data-send="https://rvkveuvrchzainwwfmem.supabase.co/functions/v1/cake-quote" data-sitekey="0x4AAAAAAFZqtwTDvBZ71QPo">
+        <div class="form__grid">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input class="input" id="name" name="name" type="text" autocomplete="name" maxlength="100" required>
+            <p class="field__error" id="err-name" hidden>Please add your name.</p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+            <p class="field__error" id="err-email" hidden>Please add an email address I can reply to.</p>
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+            <p class="field__error" id="err-phone" hidden>Please check the number, or leave it empty.</p>
+          </div>
+          <div class="field">
+            <label for="date">Event date</label>
+            <input class="input" id="date" name="date" type="date" required>
+            <p class="field__error" id="err-date" hidden>Please choose your event date.</p>
+            <p class="field__error" id="err-date-range" hidden>Please choose a date between today and three years from now.</p>
+          </div>
+          <div class="field">
+            <label for="occasion">Occasion</label>
+            <select class="input" id="occasion" name="occasion" required>
+              <option value="">Choose one</option>
+              <option>Wedding</option>
+              <option>Birthday</option>
+              <option>Baby or bridal shower</option>
+              <option>Anniversary</option>
+              <option>Corporate or other</option>
+            </select>
+            <p class="field__error" id="err-occasion" hidden>Please choose the occasion.</p>
+          </div>
+          <div class="field">
+            <label for="guests">Approximate guests</label>
+            <input class="input" id="guests" name="guests" type="number" inputmode="numeric" min="1" max="5000" placeholder="for example, 40" required>
+            <p class="field__error" id="err-guests" hidden>Please enter roughly how many guests you expect, from 1 to 5,000.</p>
+          </div>
+          <div class="field">
+            <label for="venue">Venue or city</label>
+            <input class="input" id="venue" name="venue" type="text" maxlength="120" placeholder="Sugar Land, Houston, your venue" required>
+            <p class="field__error" id="err-venue" hidden>Please add the venue or city.</p>
+          </div>
+          <div class="field">
+            <label for="budget">Budget range</label>
+            <select class="input" id="budget" name="budget">
+              <option>I'm not sure yet</option>
+              <!--slot:budget-ranges-->
+              <option>$100 to $250</option>
+              <option>$250 to $500</option>
+              <option>$500 and up</option>
+              <!--/slot-->
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="details">Tell me about the cake</label>
+          <textarea class="input" id="details" name="details" rows="5" maxlength="4000" placeholder="Colors, theme, flavors you love, anything you have seen and liked" required></textarea>
+          <p class="field__error" id="err-details" hidden>Please tell me a little about the cake.</p>
+        </div>
+        <div class="field">
+          <label for="inspo">Inspiration photos (optional)</label>
+          <input class="input" id="inspo" name="photos" type="file" accept="image/*" multiple aria-describedby="inspo-hint">
+          <ul class="form__photos" id="inspo-photos" hidden></ul>
+          <div class="field__row">
+            <span class="field__hint" id="inspo-hint" aria-live="polite">Up to three photos.</span>
+            <button class="link" type="button" id="inspo-clear" hidden>Remove the photos</button>
+          </div>
+          <p class="field__error" id="err-photos" hidden>One of the photos couldn't be sent. Choose them again, or leave them out.</p>
+        </div>
+        <div class="form__trap" aria-hidden="true">
+          <label for="leave_blank">Leave this empty</label>
+          <input id="leave_blank" name="leave_blank" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form__check" id="quote-check" hidden></div>
+        <div class="form__foot">
+          <button class="btn" type="submit" disabled>Send my inquiry</button>
+          <span class="form__note">Prefer to talk? Call or text <a href="tel:+17206622957">720.662.2957</a></span>
+        </div>
+        <p class="form__status" role="status"></p>
+        <noscript><p class="form__status">This form needs JavaScript to send. Please call or text 720.662.2957 instead.</p></noscript>
+        <template id="quote-says">
+          <p data-say="sending">Sending your inquiry…</p>
+          <p data-say="check">Please tick the box above to send your inquiry.</p>
+          <p data-say="turnstile">The spam check didn't go through. Please try sending again.</p>
+          <p data-say="busy">I already have the inquiries you sent. To add anything, call or text me at 720.662.2957.</p>
+          <p data-say="paused">The form can't take more inquiries right now. Please call or text 720.662.2957.</p>
+          <p data-say="failed">Your inquiry didn't send. Please try again, or call or text 720.662.2957.</p>
+          <p data-say="photos-preparing">Preparing your photos…</p>
+          <p data-say="photos-1">One photo ready.</p>
+          <p data-say="photos-2">Two photos ready.</p>
+          <p data-say="photos-3">Three photos ready.</p>
+          <p data-say="photos-extra">Only the first three will be sent.</p>
+          <p data-say="photos-bad">This browser can't open one of the photos you chose. A JPEG or PNG works.</p>
+          <p data-say="photos-bad-some">This browser can't open some of the photos you chose. A JPEG or PNG works.</p>
+        </template>
+      </form>
+
+      <div class="quote-sent" id="quote-sent" hidden>
+        <h2 id="quote-sent-title" tabindex="-1">Thank you. I have your inquiry.</h2>
+        <p>I reply within <!--slot:reply-time-->8 business days<!--/slot-->. If you think of anything to add before then, call or text <a href="tel:+17206622957">720.662.2957</a>.</p>
+        <p><button class="link" type="button" id="quote-again">Send another inquiry</button></p>
+      </div>
+    </div>
+
+    <aside class="aside" aria-labelledby="next-title">
+      <h2 id="next-title">What happens next</h2>
+      <ol class="aside__steps">
+        <li class="aside__step"><span class="aside__n" aria-hidden="true">1</span><p>I read your inquiry and reply within <!--slot:reply-time-->8 business days<!--/slot--> with a few questions and a first quote.</p></li>
+        <li class="aside__step"><span class="aside__n" aria-hidden="true">2</span><p>We settle the design, flavors and size. For a wedding, we can arrange a tasting box for you to try at home first.</p></li>
+        <li class="aside__step"><span class="aside__n" aria-hidden="true">3</span><p>A deposit of <!--slot:deposit-->50%<!--/slot--> reserves your date.</p></li>
+      </ol>
+      <div class="aside__notes">
+        <h3>Good to know</h3>
+        <p>Celebration cakes from <!--slot:price.celebration-->$100<!--/slot-->. Wedding cakes from <!--slot:price.wedding-->$4.50<!--/slot--> per serving. Minimum order <!--slot:price.minimum-->$100<!--/slot-->.</p>
+        <p>Please allow <!--slot:notice.celebration-->1 week<!--/slot--> for celebration cakes and <!--slot:notice.wedding-->1 month<!--/slot--> for weddings. I deliver in <!--slot:delivery-area-->Sugar Land, Missouri City and Sienna<!--/slot-->[ and set up at venues].</p>
+        <p>The studio is not a storefront. Visits are by appointment.</p>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!--part:footer-->
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__id">
+      <span class="site-foot__name">The Cake Boutique by Chef Ellah</span>
+      <span>Sugar Land, Texas. Home studio, visits by appointment.</span>
+      <span>Call or <a href="sms:+17206622957">text</a> <a href="tel:+17206622957">720.662.2957</a>, or email <a href="mailto:sales@cake.boutique">sales@cake.boutique</a></span>
+    </div>
+    <nav class="site-foot__links" aria-label="Footer">
+      <a href="weddings.html">Weddings</a>
+      <a href="celebration-cakes.html">Celebration cakes</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="https://www.facebook.com/ellahscakeboutique/">Facebook</a>
+      <a href="https://www.instagram.com/ellahscakeboutique">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <p class="site-foot__law">Made under the Texas cottage food law. THIS PRODUCT WAS PRODUCED IN A PRIVATE RESIDENCE THAT IS NOT SUBJECT TO GOVERNMENTAL LICENSING OR INSPECTION. [Allergens: the cakes and desserts are made with wheat, eggs, milk and soy, and some with tree nuts or peanuts.]</p>
+  </div>
+</footer>
+<!--/part-->
+</body>
+</html>

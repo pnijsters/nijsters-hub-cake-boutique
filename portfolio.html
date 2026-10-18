@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio, The Cake Boutique by Chef Ellah</title>
+<meta name="robots" content="noindex">
+<!--part:share-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Cake Boutique by Chef Ellah">
+<meta property="og:image" content="https://cake.boutique/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The round logo of The Cake Boutique above its name">
+<meta name="twitter:card" content="summary_large_image">
+<!--/part-->
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/DellaRespira-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/site.js"></script>
+</head>
+<body>
+<!--part:header-->
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-head">
+  <div class="wrap site-head__bar">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="" width="52" height="52">
+      <span><span class="brand__name">The Cake Boutique</span><span class="brand__by">by Chef Ellah</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+    <nav class="site-nav" id="site-menu" aria-label="Main">
+      <a href="weddings.html">Weddings</a>
+      <a href="celebration-cakes.html">Celebration cakes</a>
+      <a href="portfolio.html" aria-current="page">Portfolio</a>
+      <a href="about.html">About</a>
+      <a class="btn btn--rose" href="request-a-quote.html">Ask for a quote</a>
+    </nav>
+  </div>
+</header>
+<!--/part-->
+
+<main id="main" class="section portfolio">
+  <div class="wrap">
+    <h1 class="page-title portfolio__title">Portfolio</h1>
+    <div class="filters" role="group" aria-label="Show cakes for">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="weddings" aria-pressed="false">Weddings</button>
+      <button type="button" data-filter="birthdays" aria-pressed="false">Birthdays</button>
+      <button type="button" data-filter="showers" aria-pressed="false">Showers</button>
+      <button type="button" data-filter="dessert-tables" aria-pressed="false">Dessert tables</button>
+      <button type="button" data-filter="other" aria-pressed="false">Other</button>
+    </div>
+    <p class="visually-hidden wall-status" aria-live="polite"></p>
+    <ul class="wall">
+      <!--slot:work.portfolio-->
+      <li class="wall__item wall__item--wide" data-occasion="birthdays"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/31d16a1b-eb7e-43ff-bf33-5415df117937.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/31d16a1b-eb7e-43ff-bf33-5415df117937.webp 480w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/31d16a1b-eb7e-43ff-bf33-5415df117937.webp 1000w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Three-tier blush buttercream cake with a cascade of sugar fruit" width="1000" height="1250" fetchpriority="high"></div><figcaption><span class="work__title">Tiers of sugar fruit</span>, [birthday]</figcaption></figure></li>
+      <li class="wall__item" data-occasion="birthdays"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/67c9509f-6d9c-4b41-ad43-c6be1413dcfe.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/67c9509f-6d9c-4b41-ad43-c6be1413dcfe.webp 451w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/67c9509f-6d9c-4b41-ad43-c6be1413dcfe.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Cream cake decorated with pressed wild flowers" width="760" height="1012" fetchpriority="high"></div><figcaption><span class="work__title">Pressed flowers</span>, birthday</figcaption></figure></li>
+      <li class="wall__item wall__item--low" data-occasion="weddings"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/3f6757cc-cb62-42d3-9236-92bcba6bc6b9.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/3f6757cc-cb62-42d3-9236-92bcba6bc6b9.webp 479w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/3f6757cc-cb62-42d3-9236-92bcba6bc6b9.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="White tiered cake with a peach sugar garden rose and buds" width="760" height="951" loading="lazy"></div><figcaption><span class="work__title">Sugar garden rose</span>, [wedding]</figcaption></figure></li>
+      <li class="wall__item wall__item--wide wall__item--low" data-occasion="birthdays"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/801439b1-9779-45c8-b2d5-de9f073f6632.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/801439b1-9779-45c8-b2d5-de9f073f6632.webp 485w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/801439b1-9779-45c8-b2d5-de9f073f6632.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Tall navy cake with gold leaf, gold spheres and a gold 40 topper" width="760" height="941" loading="lazy"></div><figcaption><span class="work__title">Navy and gold</span>, [fortieth birthday]</figcaption></figure></li>
+      <li class="wall__item wall__item--wide" data-occasion="birthdays"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/437082ca-d508-4dd8-a71b-967452e28c68.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/437082ca-d508-4dd8-a71b-967452e28c68.webp 479w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/437082ca-d508-4dd8-a71b-967452e28c68.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Chocolate drip cake crowned with fresh red roses" width="760" height="951" loading="lazy"></div><figcaption><span class="work__title">Red roses and chocolate</span>, seventieth birthday</figcaption></figure></li>
+      <li class="wall__item" data-occasion="dessert-tables"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/d4f9a6fb-c803-4fb2-843e-2a174f77f9b6.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/d4f9a6fb-c803-4fb2-843e-2a174f77f9b6.webp 479w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/d4f9a6fb-c803-4fb2-843e-2a174f77f9b6.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Iced sugar cookies shaped as daisies and the number two" width="760" height="951" loading="lazy"></div><figcaption><span class="work__title">Daisy cookies</span>, [second birthday]</figcaption></figure></li>
+      <li class="wall__item wall__item--low" data-occasion="other"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/7008ac9b-a7fb-4a90-a614-d048b42ad0cd.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/7008ac9b-a7fb-4a90-a614-d048b42ad0cd.webp 483w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/7008ac9b-a7fb-4a90-a614-d048b42ad0cd.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Two-tier pink and white cake with a sugar magnolia, gold leaves and a piped cross" width="760" height="945" loading="lazy"></div><figcaption><span class="work__title">Magnolia and gold</span>, [christening]</figcaption></figure></li>
+      <li class="wall__item wall__item--wide wall__item--low" data-occasion="birthdays"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/1850fb18-75d6-4d90-952f-0dfabe5eb343.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/1850fb18-75d6-4d90-952f-0dfabe5eb343.webp 479w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/1850fb18-75d6-4d90-952f-0dfabe5eb343.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="White textured cake with gold leaf, fresh roses and a gold Happy Birthday topper" width="760" height="951" loading="lazy"></div><figcaption><span class="work__title">White with gold leaf and roses</span>, birthday</figcaption></figure></li>
+      <li class="wall__item wall__item--wide" data-occasion="dessert-tables"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/e960212e-653c-461f-ac14-e8704f048de4.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/e960212e-653c-461f-ac14-e8704f048de4.webp 479w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/e960212e-653c-461f-ac14-e8704f048de4.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Vintage piped white cake with pink rosettes and matching cupcakes on a marble table" width="760" height="951" loading="lazy"></div><figcaption><span class="work__title">Vintage piping and cupcakes</span>, [occasion]</figcaption></figure></li>
+      <li class="wall__item" data-occasion="birthdays"><figure><div class="wall__frame"><img src="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/d2926b41-9d8a-4e62-a31b-26fc4582d600.webp" srcset="https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/thumb/d2926b41-9d8a-4e62-a31b-26fc4582d600.webp 455w, https://rvkveuvrchzainwwfmem.supabase.co/storage/v1/object/public/cake-photos/full/d2926b41-9d8a-4e62-a31b-26fc4582d600.webp 760w" sizes="(max-width: 720px) 100vw, (max-width: 1280px) 58vw, 690px" alt="Pale pink heart-shaped cake with shell piping and satin ribbons" width="760" height="1003" loading="lazy"></div><figcaption><span class="work__title">Pink heart</span>, birthday</figcaption></figure></li>
+      <!--/slot-->
+    </ul>
+    <p class="wall-empty" hidden>No cakes here yet. <button type="button">See all the cakes</button></p>
+  </div>
+</main>
+
+<!--part:band-->
+<section class="band" aria-labelledby="band-title">
+  <div class="wrap band__grid">
+    <div class="band__text">
+      <h2 id="band-title">Have a date in mind?</h2>
+      <p>Tell me a little about the occasion and I will come back to you with a quote.</p>
+    </div>
+    <div class="band__action">
+      <a class="btn" href="request-a-quote.html">Ask for a quote</a>
+      <span class="band__note">or call or text <a href="tel:+17206622957">720.662.2957</a></span>
+    </div>
+  </div>
+</section>
+<!--/part-->
+
+<!--part:footer-->
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__id">
+      <span class="site-foot__name">The Cake Boutique by Chef Ellah</span>
+      <span>Sugar Land, Texas. Home studio, visits by appointment.</span>
+      <span>Call or <a href="sms:+17206622957">text</a> <a href="tel:+17206622957">720.662.2957</a>, or email <a href="mailto:sales@cake.boutique">sales@cake.boutique</a></span>
+    </div>
+    <nav class="site-foot__links" aria-label="Footer">
+      <a href="weddings.html">Weddings</a>
+      <a href="celebration-cakes.html">Celebration cakes</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="https://www.facebook.com/ellahscakeboutique/">Facebook</a>
+      <a href="https://www.instagram.com/ellahscakeboutique">Instagram</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <p class="site-foot__law">Made under the Texas cottage food law. THIS PRODUCT WAS PRODUCED IN A PRIVATE RESIDENCE THAT IS NOT SUBJECT TO GOVERNMENTAL LICENSING OR INSPECTION. [Allergens: the cakes and desserts are made with wheat, eggs, milk and soy, and some with tree nuts or peanuts.]</p>
+  </div>
+</footer>
+<!--/part-->
+</body>
+</html>
